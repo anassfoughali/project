@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resolution Enhancement</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    <h1>Image Enhancer</h1>
+    <div class="container">
+        <div class="image-container input">
+            <img src="{{ url_for('uploaded_file', filename=image) }}" alt="Original Image" id="input">
+            <p>Original Image</p>
+        </div>
+        <div class="image-container output">
+            <img src="{{ url_for('generated_file', filename=image) }}" alt="Enhanced Image" id="output">
+            <p>Enhanced Image</p>
+        </div>
+    </div>
+</body>
+</html>
+

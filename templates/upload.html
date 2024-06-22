@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload an Image</title>
+
+    <link rel="stylesheet" href="static/app.css">
+</head>
+<body>
+    <!-- {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        
+    -->
+    
+    
+    <h1>Image Enhancer</h1>
+    <div class="container">
+         <main>
+                <form id="upload-form" enctype="multipart/form-data">
+                    <div class="drop-zone" id="drop-zone">
+                        <p class="text-center">Drag & drop an image here</p>
+                        <input type="file" id="file-input" name="file" style="display: none;">
+                        <button type="button" class="btn btn-primary" onclick="document.getElementById('file-input').click();">Or click here to select file</button>
+                    </div>
+                    <div id="preview-container"></div>
+                    <input type="submit" value="Upload" style="display: block;">
+                </form>
+            </main>
+    </div>
+
+    <script src="static/scripts/app.js"></script>
+</body>
+</html>
